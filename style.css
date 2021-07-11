@@ -48,6 +48,7 @@ body {
   padding: 1rem;
   position: relative;
   top: -20px;
+  width: 45%;
 }
 label,
 p {
@@ -119,6 +120,7 @@ button:hover {
   margin: 0 0.5rem;
   border-radius: 1rem;
   padding: 1rem;
+  width: 45%;
 }
 .text h4 {
   color: var(--white);
@@ -150,5 +152,12 @@ button:hover {
     .calculation{
         flex-direction: column;
         width: 95%;
+    }
+    .result-section {
+        width: 98%;
+        margin-bottom: 20px;
+    }
+    .billing-section {
+        width: 98%;
     }
 }
