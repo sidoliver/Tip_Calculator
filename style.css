@@ -1,34 +1,154 @@
-# Front-end Style Guide
-
-## Layout
-
-The designs were created to the following widths:
-
+/* 
 - Mobile: 375px
-- Desktop: 1440px
-
-## Colors
-
-### Primary
-
-- Strong cyan: hsl(172, 67%, 45%)
-
-### Neutral
-
-- Very dark cyan: hsl(183, 100%, 15%)
-- Dark grayish cyan: hsl(186, 14%, 43%)
-- Dark grayish cyan: hsl(184, 14%, 56%)
-- Light grayish cyan: hsl(185, 41%, 84%)
-- Light grayish cyan: hsl(189, 41%, 97%)
-- White: hsl(0, 0%, 100%)
-
-## Typography
-
-### Body Copy
-
-- Font size (form inputs): 24px
-
-### Font
-
-- Family: [Space Mono](https://fonts.google.com/specimen/Space+Mono)
-- Weights: 400, 500, 700
+- Desktop: 1440px */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+:root {
+  --primary-color: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan: hsl(186, 14%, 43%);
+  --dark-grayish-cyan1: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan1: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%);
+  --font-form: 24px;
+  --font-family: "Space Mono", monospace;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--font-family);
+}
+.hero {
+    background-color: var(--light-grayish-cyan);
+    height: 150vh;
+}
+.heading {
+  text-align: center;
+  color: var(--very-dark-cyan);
+  padding: 3rem 7rem 2.5rem;
+}
+.heading h1 {
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+.calculation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--white);
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+/* billing section */
+.billing-section {
+  padding: 1rem;
+  position: relative;
+  top: -20px;
+}
+label,
+p {
+  font-weight: bold;
+  color: var(--very-dark-cyan);
+}
+input {
+  width: 100%;
+  height: 3rem;
+  border: none;
+  background-color: var(--light-grayish-cyan1);
+  font-size: 2rem;
+  font-family: var(--font-family);
+  text-align: right;
+  font-weight: bold;
+  color: var(--very-dark-cyan);
+  padding: 20px;
+}
+input:focus {
+  outline: none !important;
+}
+textarea:focus {
+  outline: none !important;
+}
+input[type="text"]::placeholder {
+  font-size: 2rem;
+  font-family: var(--font-family);
+  color: var(--dark-grayish-cyan1);
+  padding-left: 10px;
+  text-align: left;
+}
+.tip {
+  margin-top: 20px;
+}
+.tip-section {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+button {
+  width: 9rem;
+  font-size: 2rem;
+  font-family: var(--font-family);
+  font-weight: bold;
+  color: var(--white);
+  background-color: var(--very-dark-cyan);
+  padding: 2px 0;
+  border: none;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+button:hover {
+  color: var(--very-dark-cyan);
+  background-color: var(--primary-color);
+}
+.custom-tip {
+  width: 9rem;
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5rem;
+}
+.tip-section input[type="text"]::placeholder {
+  padding: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+/* result section */
+.result-section {
+  background-color: var(--very-dark-cyan);
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+.text h4 {
+  color: var(--white);
+  font-size: 1.4rem;
+}
+.text p {
+  color: var(--dark-grayish-cyan1);
+}
+.person {
+  font-size: 0.1rem;
+}
+.tip-amount,
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 10px;
+}
+.amount h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+.reset {
+  background-color: var(--primary-color);
+  color: var(--very-dark-cyan);
+  width: 100%;
+}
+@media screen and (max-width: 900px) {
+    .calculation{
+        flex-direction: column;
+        width: 95%;
+    }
+}
